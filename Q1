@@ -1,0 +1,51 @@
+Create a base class Building that stores the number of floors of a building, number of
+rooms and it’s total footage. Create a derived class House that inherits Building and also
+stores the number of bedrooms and bathrooms. Demonstrate the working of the classes.
+import java.util.*;
+class Building{
+    int nor;     //no. of rooms
+    int nof;     //no. of floors
+    double footage;
+    public Building(int a,int b,double c){
+        this.nor=a;
+        this.nof=b;
+        this.footage=c;
+    }
+    void display(){
+      System.out.println("No of rooms,Floors and Footage area are:"+nor+" "+nof+" "+footage); 
+    }
+   
+}
+class House extends Building{
+    int nobd;
+    int noba;
+    public House(int nor,int nof, double footage,int x,int y){
+        super(nor,nof,footage);
+        this.nobd=x;
+        this.noba=y;
+    }
+     
+    void display(){
+        super.display();
+        System.out.println("No. of Bedrooms and Bathrooms  are"+nobd+" "+noba);
+    }
+}
+
+public class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter no of House;");
+        int a=sc.nextInt();
+        System.out.println("Enter no of Floors;");
+        int b=sc.nextInt();
+        System.out.println("Enter no of footage;");
+        double c=sc.nextDouble();
+        System.out.println("Enter no of bedroom;");
+        int x=sc.nextInt();
+        System.out.println("Enter no of bathroom;");
+        int y=sc.nextInt();
+        
+        House h=new House(a,b,c,x,y);
+        h.display();
+    }
+}
