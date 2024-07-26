@@ -1,0 +1,39 @@
+Write a Java program to create an interface Shape with the getArea() method.
+Create three classes Rectangle, Circle, and Triangle that implement the Shape interface. 
+Implement the getArea() method for each of the three classes.
+
+interface Shape {
+  void getArea();
+}
+
+class Rectangle implements Shape {
+    int a,b;
+    Rectangle(int a,int b){
+        this.a=a;
+        this.b=b;
+    }
+  public void getArea() {
+    System.out.println("The area of the rectangle is " + (a * b));
+  }
+}
+
+class Circle  implements Shape {
+    double r;
+    Circle(double r){
+        this.r=r;
+    }
+
+  public void getArea() {
+    System.out.println("The area of the circle is " + (3.141*r*r));
+  }
+}
+
+public class Main {
+  public static void main(String[] args) {
+    Rectangle r1 = new Rectangle(6,8);
+    Circle c1=new Circle(4);
+    r1.getArea();
+    c1.getArea();
+  }
+}
+
