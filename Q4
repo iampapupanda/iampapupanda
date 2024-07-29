@@ -1,0 +1,30 @@
+Write a Java program to create an interface Playable with a method play() that takes no arguments and returns void. 
+Create three classes Football, Volleyball, and Basketball that implement the Playable interface and override the play() method to play the respective sports.
+interface Sports{
+    public void play();
+}
+class Football implements Sports{
+    public void play(){
+        System.out.println("playing football.");
+    }
+}
+class Basketball implements Sports{
+    public void play(){
+        System.out.println("playing basketball.");
+    }
+}
+class Rugby implements Sports{
+    public void play(){
+        System.out.println("playing rugby.");
+    }
+}
+public class main {
+    public static void main(String[] args) {
+        Football f = new Football();
+        Basketball b = new Basketball();
+        Rugby r = new Rugby();
+        f.play();
+        b.play();
+        r.play();
+    }
+}
