@@ -1,0 +1,30 @@
+Write a Java program to create an interface Resizable with methods resizeWidth(int width) and resizeHeight(int height) that
+allow an object to be resized. Create a class Rectangle that implements the Resizable interface and
+implements the resize methods.
+interface Resizeable {
+    public void resizeWidth(int Width);
+    public void resizeHeight(int Height);
+}
+
+class Rectangle implements Resizeable{
+    int h,w;
+    Rectangle(int height,int width){
+        this.h=height;
+        this.w=width;
+    }
+    public void resizeHeight(int h){
+        System.out.println("height is "+h);
+    }
+    public void resizeWidth(int w){
+        System.out.println("width is "+w);
+    }
+}
+
+public class Main
+{
+    public static void main(String[] args) {
+        Rectangle r=new Rectangle(8,6);
+        r.resizeHeight(8);
+        r.resizeWidth(6);
+    }
+}
