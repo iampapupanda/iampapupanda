@@ -1,0 +1,35 @@
+Write a Java program to create a class called Rectangle with private instance variables length and width. 
+Provide public getter and setter methods to access and modify these variables.
+class Rectangle {
+    private int length;
+    private int width;
+    
+    public int getLength() {
+        return length;
+    }
+    public void setLength(int length) {
+        this.length=length;
+    }
+    
+    public int getWidth() {
+        return width;
+    }
+    public void setWidth(int width) {
+        this.width=width;
+    }
+}
+public class Main {
+    public static void main(String [] args) {
+        Rectangle r=new Rectangle();
+        
+        r.setLength(4);
+        r.setWidth(2);
+        
+        int a=r.getLength();
+        int b=r.getWidth();
+        
+        System.out.println("Length is "+2*a);
+        System.out.println("Width is "+2*b);
+        
+    }
+}
