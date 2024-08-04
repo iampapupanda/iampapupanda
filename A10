@@ -1,0 +1,33 @@
+Write a Java program to create a base class Sports with a method called play(). Create three subclasses: Football, Basketball, and Rugby.
+Override the play() method in each subclass to play a specific statement for each sport.
+class Sports{
+     public void play() {
+         
+     }
+}
+class Football extends Sports{
+    public void play() {
+        System.out.println("Play Football.");
+    }
+}
+class Basketball extends Sports{
+    public void play() {
+        System.out.println("Play Basketball.");
+    }
+}
+class Rugby extends Sports{
+    public void play() {
+        System.out.println("Play Rugby.");
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Football f=new Football();
+		f.play();
+        Basketball  b=new Basketball ();
+		b.play();
+        Rugby r=new Rugby();
+		r.play();
+
+    }
+}
