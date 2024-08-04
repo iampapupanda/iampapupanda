@@ -1,0 +1,56 @@
+Write a Java program to create a class called Student with private instance variables student_id, student_name, and grades. Provide public getter and 
+setter methods to access and modify the student_id and student_name variables. However, provide a method called addGrade() that allows adding 
+a grade to the grades variable while performing additional validation.
+
+class Student {
+    private int student_id;
+    private String student_name;
+    private int grades;
+
+    public Student(int student_id, String student_name, int grades) {
+        this.student_id = student_id;
+        this.student_name = student_name;
+        this.grades = grades;
+    }
+
+    // Getter and setter for student_id
+    public int getStudentId() {
+        return student_id;
+    }
+
+    public void setStudentId(int student_id) {
+        this.student_id = student_id;
+    }
+
+    // Getter and setter for student_name
+    public String getStudentName() {
+        return student_name;
+    }
+
+    public void setStudentName(String student_name) {
+        this.student_name = student_name;
+    }
+    
+    // Getter and setter for grades
+    public int getGrades() {
+        return grades;
+    }
+    
+    public void setGrades(int grades) {
+        this.grades = grades;
+    }
+    
+    public static void main(String[] args) {
+        // Example usage
+        Student student = new Student(12345, "John Doe", 87);
+    
+        System.out.println("Student ID: " + student.getStudentId());
+        System.out.println("Student Name: " + student.getStudentName());
+        System.out.println("Grades: " + student.getGrades());
+        
+        student.setGrades(92);
+    
+        System.out.println("After modification Grades: " + student.getGrades());
+        
+    }
+}
