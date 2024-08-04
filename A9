@@ -1,0 +1,64 @@
+Write a Java program to create a class Employee with a method called calculateSalary(). Create two subclasses Manager and Programmer.
+In each subclass, override the calculateSalary() method to calculate and return the salary based on their specific roles.
+class Employee {
+    private String name;
+    private String role;
+
+    public Employee(String name, String role) {
+        this.name = name;
+        this.role = role;
+    }
+
+    public String getName() {
+        return name;
+    }
+    
+    public String getRole() {
+        return role;
+    }
+
+    public double calculateSalary() {
+        return 0.0;
+    }
+} 
+
+class Manager extends Employee {
+    private double baseSalary;
+    private double bonus;
+
+    public Manager(String name, double baseSalary, double bonus) {
+        super(name, "Manager");
+        this.baseSalary = baseSalary;
+        this.bonus = bonus;
+    }
+
+    public double calculateSalary() {
+        return baseSalary + bonus;
+    }
+} 
+class Programmer extends Employee {
+    private double baseSalary;
+    private double overtimePay;
+    
+    public Programmer(String name, double baseSalary, double overtimePay) {
+        super(name, "Programmer");
+        this.baseSalary = baseSalary;
+        this.overtimePay = overtimePay;
+    }
+
+    public double calculateSalary() {
+        return baseSalary + overtimePay;
+    }
+}
+
+public class Main {
+
+public static void main(String[] args) {
+
+    Employee e1 = new Manager("Ashok Pattnaik", 7500.0, 1500.0);
+    Employee e2 = new Programmer("Manoj Ku. Sahu", 5000.0, 600.0);
+
+        System.out.println("Manager: " + e1.getName() + "\nRole: " + e1.getRole() + "\nSalary: $" + e1.calculateSalary());
+    System.out.println("\nProgrammer: " + e2.getName() + "\nRole: " + e2.getRole() + "\nSalary: $" + e2.calculateSalary());
+    }
+}
